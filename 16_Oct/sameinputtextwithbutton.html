@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="input1">Name :</label>
+        <input type="text" name="" id="input1">
+
+        <br><br>
+        <label for="input2">Last Name</label>
+        <input type="text" name="" id="input2">
+        <input type="submit" onclick=" return  clone()">
+    </form>
+
+    <script>
+        function clone() {
+            var inp1 = document.getElementById('input1');
+            var inp2 = document.getElementById('input2');
+
+
+            inp2.value = inp1.value;
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

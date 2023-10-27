@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform" onsubmit="return validation()" method="post">
+        E-MAIL <input style="text-transform: capitalize;" id="email" type="text" name="email"> <br><br> PASSWORD: <input id="pass" type="password" name="pass"><br><br> PHone No:<input type="number" name="number" id=""><br><br>
+        <p style="color: red;" id="p1"></p>
+        <input type="submit" value="SAVE">
+    </form>
+    <script>
+        function validation() {
+            let x = document.getElementById('email').value;
+            let y = document.getElementById('pass').value;
+
+            if (x == "") {
+                document.getElementById('p1').innerHTML = "Please Fill This"
+                return false;
+            } else if (y == "") {
+                document.getElementById('p1').innerHTML = "Please enter a password"
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

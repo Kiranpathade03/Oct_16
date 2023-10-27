@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Auto Disable and Fill Input</title>
+    <style>
+        .disabled {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1">
+        <br>
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" disabled class="disabled">
+    </form>
+
+    <script>
+        document.getElementById("input1").addEventListener("input", function() {
+            document.getElementById("input2").value = "1";
+            document.getElementById("input2").disabled = true;
+        });
+    </script>
+</body>
+
+</html>

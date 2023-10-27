@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Input Example</title>
+</head>
+
+<body>
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1" oninput="copyText()" />
+
+    <br>
+
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" />
+
+    <script>
+        function copyText() {
+            var input1 = document.getElementById('input1');
+            var input2 = document.getElementById('input2');
+
+            // Copy the text from input1 to input2
+            input2.value = input1.value;
+        }
+    </script>
+</body>
+
+</html>
